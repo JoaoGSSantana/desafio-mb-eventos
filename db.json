@@ -1,0 +1,51 @@
+{
+  "users": [],
+  "events": [
+    {
+      "id": "dcd47835-24e6-4668-92c1-57617a41f549",
+      "name": "Feira de profissões",
+      "organizer": "Faculdades ABCD",
+      "type": "university",
+      "date": "2022-12-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "description": "Feira de profissões organizada pelas Faculdades ABCD para divulgação dos seus principais cursos e auxiliar novos alunos a encontrarem suas profissões.",
+      "ticket": {
+        "fullPrice": 20,
+        "halfPrice": 10,
+        "ticketsAvailable": 500
+      }
+    },
+    {
+      "id": "f9e667a0-68f2-4db1-a4bd-7d6d679526ac",
+      "name": "Workshop X",
+      "organizer": "Empresa X",
+      "type": "company",
+      "date": "2023-01-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "description": "Workshop realizado pela Empresa X para divulgar suas novidades.",
+      "ticket": {
+        "fullPrice": 50,
+        "halfPrice": 25,
+        "ticketsAvailable": 100
+      }
+    },
+    {
+      "id": "2c136451-170d-44ed-932b-295a15435b83",
+      "name": "Mega Evento Y 2023",
+      "organizer": "Empresa Y",
+      "type": "company",
+      "date": "2023-02-03T13:40:17.281Z",
+      "timeCourse": "07:00 - 23:00",
+      "address": "Rua Omega, 456. São Paulo - SP",
+      "description": "Workshop realizado pela Empresa Y para divulgar suas novidades e inovações.",
+      "ticket": {
+        "fullPrice": 100,
+        "halfPrice": 50,
+        "ticketsAvailable": 1000
+      }
+    }
+  ],
+  "tickets": []
+}
