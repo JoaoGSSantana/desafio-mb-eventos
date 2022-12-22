@@ -1,9 +1,8 @@
 import { KeyboardAvoidingView } from "react-native";
-import { SafeAreaView } from "react-native-safe-area-context";
 
 import styled, { css } from "styled-components/native";
 
-export const Container = styled(SafeAreaView)`
+export const Container = styled(KeyboardAvoidingView)`
     flex: 1;
 
     align-items: center;
@@ -11,7 +10,7 @@ export const Container = styled(SafeAreaView)`
     padding-left: 24px;
     padding-right: 24px;
 
-    padding-top: 24px;
+    padding-top: ${48}px;
     padding-bottom: 24px;
 
     background-color: ${({ theme }) => theme.colors.gray[900]};
@@ -25,7 +24,7 @@ export const Title = styled.Text`
         color: ${theme.colors.white};
 
         align-self: flex-start;
-        margin-top: 24px;
+        margin-top: 12px;
     `}
 `;
 

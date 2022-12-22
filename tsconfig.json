@@ -9,7 +9,10 @@
       "@screens/*": ["./src/screens/*"],
       "@theme/*": ["./src/config/theme/*"],
       "@mocks/*": ["./src/config/mocks/*"],
-      "@utils/*": ["./src/utils/*"]
+      "@services/*": ["./src/services/*"],
+      "@hooks/*": ["./src/hooks/*"],
+      "@contexts/*": ["./src/contexts/*"],
+      "@utils/*": ["./src/utils/*"],
     }
   }
 }

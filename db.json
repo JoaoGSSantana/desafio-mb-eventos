@@ -1,5 +1,18 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "johndoe@email.com",
+      "password": "$2a$10$A4QWxxviRY.48rzyd2/2ougcpK8d34sMclQVCc0VN/F0lqnS1x8QS",
+      "id": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "name": "John Doe"
+    },
+    {
+      "email": "joao.santana09@outlook.com",
+      "password": "$2a$10$xb8XSs/pcXAe/jbsXD0xo.uort/HMryS3F9ij9WEScffA1Z6yMVFe",
+      "name": "João Gabriel Santana",
+      "id": "c98b9fa9-0a89-4597-b3b7-aaf243347867"
+    }
+  ],
   "events": [
     {
       "id": "dcd47835-24e6-4668-92c1-57617a41f549",
@@ -47,5 +60,162 @@
       }
     }
   ],
-  "tickets": []
+  "tickets": [
+    {
+      "id": "416cdb29-7db5-4627-843d-1c2b6eb622b1",
+      "name": "Feira de profissões",
+      "organizer": "Faculdades ABCD",
+      "type": "university",
+      "date": "2022-12-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "eventId": "dcd47835-24e6-4668-92c1-57617a41f549",
+      "userId": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 10,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 5,
+          "quantity": 0
+        },
+        "total": 10
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    },
+    {
+      "id": "f4dbede4-a3c8-46e1-be8c-870d00b9983c",
+      "name": "Feira de profissões",
+      "organizer": "Faculdades ABCD",
+      "type": "university",
+      "date": "2022-12-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "eventId": "dcd47835-24e6-4668-92c1-57617a41f549",
+      "userId": "c98b9fa9-0a89-4597-b3b7-aaf243347867",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 10,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 5,
+          "quantity": 0
+        },
+        "total": 10
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    },
+    {
+      "id": "07ef1b18-6f4e-4a88-aad4-7e4674e5c1ce",
+      "name": "Mega Evento Y 2023",
+      "organizer": "Empresa Y",
+      "type": "company",
+      "date": "2023-02-03T13:40:17.281Z",
+      "timeCourse": "07:00 - 23:00",
+      "address": "Rua Omega, 456. São Paulo - SP",
+      "eventId": "2c136451-170d-44ed-932b-295a15435b83",
+      "userId": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 100,
+          "quantity": 5
+        },
+        "halfPrice": {
+          "price": 50,
+          "quantity": 0
+        },
+        "total": 500
+      },
+      "paymentMethods": {
+        "type": "credit",
+        "installments": 3
+      }
+    },
+    {
+      "id": "2427934b-c47e-4248-8243-5fe0f13ce2d7",
+      "name": "Workshop X",
+      "organizer": "Empresa X",
+      "type": "company",
+      "date": "2023-01-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "eventId": "f9e667a0-68f2-4db1-a4bd-7d6d679526ac",
+      "userId": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 50,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 25,
+          "quantity": 1
+        },
+        "total": 75
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    },
+    {
+      "id": "85b98adc-59ea-4250-99a1-9cd2ca92cc92",
+      "name": "Mega Evento Y 2023",
+      "organizer": "Empresa Y",
+      "type": "company",
+      "date": "2023-02-03T13:40:17.281Z",
+      "timeCourse": "07:00 - 23:00",
+      "address": "Rua Omega, 456. São Paulo - SP",
+      "eventId": "2c136451-170d-44ed-932b-295a15435b83",
+      "userId": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 100,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 50,
+          "quantity": 0
+        },
+        "total": 100
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    },
+    {
+      "id": "78115cc3-f03a-4517-a1be-88ed83e68f1d",
+      "name": "Workshop X",
+      "organizer": "Empresa X",
+      "type": "company",
+      "date": "2023-01-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "eventId": "f9e667a0-68f2-4db1-a4bd-7d6d679526ac",
+      "userId": "02c84891-ea84-4b91-a081-4c8b8c7b7db7",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 50,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 25,
+          "quantity": 1
+        },
+        "total": 75
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    }
+  ]
 }

@@ -12,6 +12,7 @@ import {
 } from "@expo-google-fonts/inter";
 
 import { Routes } from "./src/routes";
+import { AuthProvider } from "./src/contexts/AuthContext";
 
 export default function App() {
     const [fontsLoaded] = useFonts({
@@ -20,13 +21,15 @@ export default function App() {
     });
     return (
         <ThemeProvider theme={theme}>
-            <StatusBar
-                // eslint-disable-next-line react/style-prop-object
-                style="light"
-                backgroundColor="transparent"
-                translucent
-            />
-            {fontsLoaded ? <Routes /> : <Loading />}
+            <AuthProvider>
+                <StatusBar
+                    // eslint-disable-next-line react/style-prop-object
+                    style="light"
+                    backgroundColor="transparent"
+                    translucent
+                />
+                {fontsLoaded ? <Routes /> : <Loading />}
+            </AuthProvider>
         </ThemeProvider>
     );
 }

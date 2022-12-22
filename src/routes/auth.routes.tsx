@@ -1,7 +1,8 @@
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+import { HomeScreen } from "@screens/HomeScreen";
+import { LoginScreen } from "@screens/LoginScreen";
 import { RegisterScreen } from "@screens/RegisterScreen";
-import { HomeScreen } from "../screens/HomeScreen";
 
 export function AuthRoutes() {
     const { Navigator, Screen } = createNativeStackNavigator();
@@ -9,6 +10,7 @@ export function AuthRoutes() {
     return (
         <Navigator screenOptions={{ headerShown: false }}>
             <Screen name="homeScreen" component={HomeScreen} />
+            <Screen name="loginScreen" component={LoginScreen} />
             <Screen name="registerScreen" component={RegisterScreen} />
         </Navigator>
     );

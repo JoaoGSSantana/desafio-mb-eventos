@@ -9,4 +9,24 @@ export default {
         buttonSignUp: "Cadastrar",
         backText: "Não, obrigado",
     },
+    LoginScreen: {
+        title: "Login",
+        buttonSignIn: "Entrar",
+    },
+    EventDetailsScreen: {
+        labelTimeCourse: "Horário",
+        labelAddress: "Endereço",
+        labelDescription: "Descrição",
+        labelAmount: "Valor do ingresso ",
+        labelTotalValue: "Valor total:  ",
+        buttonBuy: "Comprar",
+    },
+    EventBuysTicketsScreen: {
+        title: "Resumo",
+        labelWhatBought: "O que foi comprado?",
+        labelPayment: "Método de pagamento",
+        labelInstallment: "Quantidade de parcelas",
+        labelTotalValue: "Valor total",
+        buttonBuy: "Finalizar compra",
+    },
 };

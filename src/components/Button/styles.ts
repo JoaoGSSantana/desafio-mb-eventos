@@ -1,4 +1,4 @@
-import { TouchableOpacity } from "react-native";
+import { TouchableOpacity, ActivityIndicator } from "react-native";
 
 import styled, { css } from "styled-components/native";
 
@@ -16,6 +16,7 @@ export const Container = styled(TouchableOpacity)`
 
     background-color: ${({ theme }) => theme.colors.primary[500]};
 `;
+
 export const ButtonText = styled.Text`
     ${({ theme }) => css`
         font-size: ${theme.fonts.sizes.sm}px;
@@ -23,3 +24,10 @@ export const ButtonText = styled.Text`
         color: ${theme.colors.gray[900]};
     `}
 `;
+
+export const LoadingIndicator = styled(ActivityIndicator).attrs(
+    ({ theme, size }) => ({
+        color: theme.colors.gray[900],
+        size,
+    })
+)``;

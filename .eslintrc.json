@@ -26,6 +26,10 @@
     "rules": {
         "import/no-unresolved": "off",
         "react/react-in-jsx-scope": "off",
+        "no-useless-catch": "off",
+        "no-console": "off",
+        "react/no-unstable-nested-components": ["off"],
+        "no-use-before-define": "warn",
         "react/jsx-filename-extension": [
             1,
             {
