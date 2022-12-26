@@ -42,12 +42,14 @@ interface IRouteProps {
 
 export function EventBuyTicketsScreen() {
     const [installmentCounter, setInstallmentCounter] = useState(0);
-    const [paymentMethod, setPaymentMethod] = useState("inCash");
+    const [paymentMethod, setPaymentMethod] = useState<"inCash" | "credit">(
+        "inCash"
+    );
     const [isLoading, setIsLoading] = useState(false);
 
     const { EventBuysTicketsScreen: text } = texts;
 
-    const { navigate, goBack } = useNavigation();
+    const { navigate } = useNavigation();
     const route = useRoute();
 
     const { event, buyTickets } = route.params as IRouteProps;
@@ -103,9 +105,10 @@ export function EventBuyTicketsScreen() {
             id: eventId,
         } = event;
         const paymentMethods = handleCreatePayment();
+        const id: string = uuid.v4() as string;
 
         return {
-            id: uuid.v4(),
+            id,
             name,
             organizer,
             type,
@@ -132,14 +135,13 @@ export function EventBuyTicketsScreen() {
                 title: "Compra realizada com sucesso!",
                 message:
                     "Seus ingressos estarão disponíveis na área meus ingressos.",
-                onClickButton: () => navigate("eventsMain"),
+                goToMain: true,
             });
         } catch (error) {
             navigate("responseScreen", {
                 success: false,
                 buttonText: "Tente novamente",
                 title: "Não foi possível realizar sua compra, tente novamente!",
-                onClickButton: () => goBack(),
             });
         } finally {
             setIsLoading(false);

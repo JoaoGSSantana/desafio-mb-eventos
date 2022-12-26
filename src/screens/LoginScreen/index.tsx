@@ -28,15 +28,18 @@ export function LoginScreen() {
     }
 
     // Lida com o login do usuário
-    function handleLogIn() {
+    async function handleLogIn() {
         try {
-            logIn({ email, password });
+            if (!email || !password) {
+                setFeedback({
+                    message:
+                        "Não foi possível realizar login, verifique se o campo de email e senha foram preenchidos.",
+                    visible: true,
+                });
+            } else await logIn({ email, password });
         } catch (error) {
-            console.log(error);
-
             setFeedback({
-                message:
-                    "Não foi possível realizar login, verifique as informação e tente novamente.",
+                message: `Não foi possível realizar login, verifique as informação e tente novamente. \n(${error})`,
                 visible: true,
             });
         }

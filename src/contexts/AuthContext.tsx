@@ -17,6 +17,7 @@ export interface IUserProps {
 export interface IAuthContextDataProps {
     user: IUserProps;
     logIn: (infos: ILoginServiceRequest) => Promise<void>;
+    logOut: () => Promise<void>;
     isUserLoading: boolean;
 }
 
@@ -39,7 +40,18 @@ export function AuthProvider({ children }: IAuthProviderProps) {
             const result = await AuthService.logIn(infos);
             setResponse(result);
         } catch (error) {
-            console.log(error);
+            throw error;
+        } finally {
+            setIsUserLoading(false);
+        }
+    }
+
+    async function logOut() {
+        try {
+            setIsUserLoading(true);
+            setResponse({} as ILoginServiceResponse);
+            setUser({} as IUserProps);
+        } catch (error) {
             throw error;
         } finally {
             setIsUserLoading(false);
@@ -52,7 +64,6 @@ export function AuthProvider({ children }: IAuthProviderProps) {
             setUser(response.user);
             api.defaults.headers.common.Authorization = `Bearer ${response.accessToken}`;
         } catch (error) {
-            console.log(error);
             throw error;
         } finally {
             setIsUserLoading(false);
@@ -70,6 +81,7 @@ export function AuthProvider({ children }: IAuthProviderProps) {
             // eslint-disable-next-line react/jsx-no-constructed-context-values
             value={{
                 logIn,
+                logOut,
                 user,
                 isUserLoading,
             }}

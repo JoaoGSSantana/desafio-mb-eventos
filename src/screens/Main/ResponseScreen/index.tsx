@@ -1,6 +1,7 @@
-import { useRoute } from "@react-navigation/native";
+import { useNavigation, useRoute } from "@react-navigation/native";
 
 import Logo from "@assets/logo.svg";
+
 import { Button } from "@components/Button";
 
 import {
@@ -17,14 +18,23 @@ interface IRouteProps {
     title: string;
     message?: string;
     buttonText: string;
-    onClickButton?: () => void;
+    goToMain?: boolean;
 }
 
 export function ResponseScreen() {
+    const { navigate, goBack } = useNavigation();
     const route = useRoute();
 
-    const { success, title, message, buttonText, onClickButton } =
+    const { success, title, message, buttonText, goToMain } =
         route.params as IRouteProps;
+
+    function handleClickButton() {
+        if (goToMain) {
+            navigate("eventsMain");
+        } else {
+            goBack();
+        }
+    }
 
     return (
         <Container>
@@ -34,7 +44,7 @@ export function ResponseScreen() {
                 <Title success={success}>{title}</Title>
                 {message && <Message success={success}>{message}</Message>}
             </Content>
-            <Button text={buttonText} onPress={onClickButton} />
+            <Button text={buttonText} onPress={handleClickButton} />
         </Container>
     );
 }

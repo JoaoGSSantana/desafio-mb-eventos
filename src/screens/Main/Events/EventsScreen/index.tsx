@@ -61,7 +61,7 @@ export function EventsScreen() {
     // Executa a atualização da lista quando a tela ganha o foco
     useFocusEffect(
         useCallback(() => {
-            // Busca os eventos no beck
+            // Busca os eventos no back-end
             async function fetchEvents() {
                 try {
                     const result = await EventsService.list();
@@ -114,6 +114,9 @@ export function EventsScreen() {
                         onPress={() => handleSelectEvent(item)}
                     />
                 )}
+                contentContainerStyle={{
+                    paddingBottom: "20%",
+                }}
                 ListEmptyComponent={
                     <EmptyList
                         text="Nenhum evento disponível no momento.Tente em outro momento!"

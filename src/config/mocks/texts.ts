@@ -29,4 +29,8 @@ export default {
         labelTotalValue: "Valor total",
         buttonBuy: "Finalizar compra",
     },
+    MyTicketsScreen: {
+        title: "Meus ingressos",
+        logOut: "Sair",
+    },
 };

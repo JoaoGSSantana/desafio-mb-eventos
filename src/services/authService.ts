@@ -1,3 +1,4 @@
+import { AxiosError } from "axios";
 import { IUserProps } from "@contexts/AuthContext";
 
 import { api } from "./api";
@@ -26,7 +27,15 @@ export class AuthService {
 
             return response.data as ILoginServiceResponse;
         } catch (error) {
-            throw error;
+            if (error instanceof AxiosError) {
+                const e: string = error.response?.data
+                    ? error.response?.data
+                    : "internal error";
+
+                throw new Error(e);
+            } else {
+                throw error;
+            }
         }
     }
 

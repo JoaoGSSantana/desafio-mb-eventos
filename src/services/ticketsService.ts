@@ -2,7 +2,7 @@ import { TagType } from "@components/Tag";
 import { api } from "./api";
 
 export interface PaymentMethodDO {
-    type: string;
+    type: "inCash" | "credit";
     installments: number;
 }
 
@@ -19,7 +19,7 @@ export interface BuysTicketsDO {
 }
 
 export interface TicketsDTO {
-    id: string | number[];
+    id: string;
     name: string;
     organizer: string;
     type: TagType;
@@ -40,6 +40,16 @@ export class TicketsService {
             return response.data;
         } catch (error) {
             throw error;
+        }
+    }
+
+    static async listMyTickets(userId: string) {
+        try {
+            const response = await api.get(`/660/tickets?userId=${userId}`);
+
+            return response.data;
+        } catch (error) {
+            return [];
         }
     }
 }

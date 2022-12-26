@@ -22,7 +22,7 @@ export declare global {
                 title: string;
                 message?: string;
                 buttonText: string;
-                onClickButton?: () => void;
+                goToMain?: boolean;
             };
         }
     }

@@ -69,7 +69,6 @@ export function RegisterScreen() {
                 });
             }
         } catch (error) {
-            console.log(error);
             setSuccess(false);
             setFeedback({
                 visible: true,
