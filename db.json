@@ -1,5 +1,12 @@
 {
-  "users": [],
+  "users": [
+    {
+      "email": "teste@email.com",
+      "password": "$2a$10$WrfPXIkNGH8p8b4CcD96Xu/dKRq8vddqwGUF.a03AO2tzLbcYhOY2",
+      "name": "Teste Teste",
+      "id": "b44b0d4d-229c-450a-995a-f2dcf07d693b"
+    }
+  ],
   "events": [
     {
       "id": "dcd47835-24e6-4668-92c1-57617a41f549",
@@ -152,5 +159,84 @@
       }
     }
   ],
-  "tickets": []
+  "tickets": [
+    {
+      "id": "298eb96c-1fdc-404e-bcee-02397deaed3b",
+      "name": "Feira de profissões",
+      "organizer": "Faculdades ABCD",
+      "type": "university",
+      "date": "2023-03-20T13:40:17.281Z",
+      "timeCourse": "07:00 - 18:00",
+      "address": "Rua Alfa, 123. São Paulo - SP",
+      "eventId": "dcd47835-24e6-4668-92c1-57617a41f549",
+      "userId": "b44b0d4d-229c-450a-995a-f2dcf07d693b",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 20,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 10,
+          "quantity": 0
+        },
+        "total": 20
+      },
+      "paymentMethods": {
+        "type": "inCash",
+        "installments": 1
+      }
+    },
+    {
+      "id": "cd29d554-322f-4bb3-b44c-636c904ce295",
+      "name": "Agro&Tec 2023",
+      "organizer": "Agro&Tec Empresa",
+      "type": "company",
+      "date": "2023-03-12T13:40:17.281Z",
+      "timeCourse": "08:00 - 23:00",
+      "address": "Rua Beta, 123. São Paulo - SP",
+      "eventId": "c84388e5-0cd1-406a-b542-d88e67d0b407",
+      "userId": "b44b0d4d-229c-450a-995a-f2dcf07d693b",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 20,
+          "quantity": 0
+        },
+        "halfPrice": {
+          "price": 10,
+          "quantity": 2
+        },
+        "total": 20
+      },
+      "paymentMethods": {
+        "type": "credit",
+        "installments": 1
+      }
+    },
+    {
+      "id": "a760ee97-a2c6-46db-88e6-1570bf1d25f3",
+      "name": "Omega Fest Party",
+      "organizer": "Faculdade Omega",
+      "type": "university",
+      "date": "2023-03-25T13:40:17.281Z",
+      "timeCourse": "06:00 - 01:00",
+      "address": "Rua Omega, 50. São Paulo - SP",
+      "eventId": "a36489a6-ff6d-4426-8350-58599c537986",
+      "userId": "b44b0d4d-229c-450a-995a-f2dcf07d693b",
+      "buyTickets": {
+        "fullPrice": {
+          "price": 120,
+          "quantity": 1
+        },
+        "halfPrice": {
+          "price": 60,
+          "quantity": 1
+        },
+        "total": 180
+      },
+      "paymentMethods": {
+        "type": "credit",
+        "installments": 3
+      }
+    }
+  ]
 }
