@@ -1,7 +1,7 @@
 import styled, { css } from "styled-components/native";
 
 export const Container = styled.ScrollView`
-    margin-bottom: 20%;
+    margin-bottom: 64px;
 
     padding-bottom: 24px;
 
