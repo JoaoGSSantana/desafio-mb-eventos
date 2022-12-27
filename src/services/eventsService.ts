@@ -20,9 +20,9 @@ export interface EventDTO {
 export class EventsService {
     static async list() {
         try {
-            const response = await api.get("/440/events");
+            const { data } = await api.get<EventDTO[]>("/440/events");
 
-            return response.data as EventDTO[];
+            return data;
         } catch (error) {
             return [];
         }

@@ -45,9 +45,11 @@ export class TicketsService {
 
     static async listMyTickets(userId: string) {
         try {
-            const response = await api.get(`/660/tickets?userId=${userId}`);
+            const { data } = await api.get<TicketsDTO[]>(
+                `/660/tickets?userId=${userId}`
+            );
 
-            return response.data;
+            return data;
         } catch (error) {
             return [];
         }
